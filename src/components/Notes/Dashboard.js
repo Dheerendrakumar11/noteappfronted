@@ -5,6 +5,7 @@ import { Navbar, Nav, NavDropdown, Modal, Form, Button, Card } from "react-boots
 
 const Dashboard = () => {
   const [notes, setNotes] = useState([]);
+  console.log(notes)
   const [updatedName, setUpdatedName] = useState(""); // Name for profile update
   const [updatedEmail, setUpdatedEmail] = useState(""); // Profile picture URL
   const [showUpdateModal, setShowUpdateModal] = useState(false); // Update Profile modal visibility
