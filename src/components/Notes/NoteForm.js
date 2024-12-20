@@ -16,7 +16,7 @@ const NotesManager = () => {
     }
 
     try {
-      const response = await axios.get("http://localhost:5000/api/notes", {
+      const response = await axios.get("https://my-backend-u9o9.onrender.com/api/notes", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setNotes(response.data);
@@ -41,11 +41,11 @@ const NotesManager = () => {
 
     try {
       if (editId) {
-        await axios.put(`http://localhost:5000/api/notes/${editId}`, noteData, {
+        await axios.put(`https://my-backend-u9o9.onrender.com/api/notes/${editId}`, noteData, {
           headers: { Authorization: `Bearer ${token}` },
         });
       } else {
-        await axios.post("http://localhost:5000/api/notes", noteData, {
+        await axios.post("https://my-backend-u9o9.onrender.com/api/notes", noteData, {
           headers: { Authorization: `Bearer ${token}` },
         });
       }
@@ -71,7 +71,7 @@ const NotesManager = () => {
     }
 
     try {
-      await axios.delete(`http://localhost:5000/api/notes/${id}`, {
+      await axios.delete(`https://my-backend-u9o9.onrender.com/api/notes/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchNotes();

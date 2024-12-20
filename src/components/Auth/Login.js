@@ -10,7 +10,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("http://localhost:5000/api/users/login", { email, password });
+      const { data } = await axios.post("https://my-backend-u9o9.onrender.com/api/users/login", { email, password });
       localStorage.setItem("token", data.token);
       window.location.href = "/dashboard";
     } catch (error) {

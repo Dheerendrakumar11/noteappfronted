@@ -32,7 +32,7 @@ const Dashboard = () => {
       };
 
       const { data } = await axios.put(
-        `http://localhost:5000/api/users/update/${id}`, // Update endpoint
+        `https://my-backend-u9o9.onrender.com/api/users/update/${id}`, // Update endpoint
         updatedUser,
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
@@ -50,7 +50,7 @@ const Dashboard = () => {
   // Fetch notes from the backend
   const fetchNotes = async () => {
     try {
-      const { data } = await axios.get("http://localhost:5000/api/notes", {
+      const { data } = await axios.get("https://my-backend-u9o9.onrender.com/api/notes", {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
       setNotes(data);
@@ -65,7 +65,7 @@ const Dashboard = () => {
 
     const fetchUser = async () => {
       try {
-        const { data } = await axios.get("http://localhost:5000/api/users/detail", {
+        const { data } = await axios.get("https://my-backend-u9o9.onrender.com/api/users/detail", {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
         });
         setUser(data);
