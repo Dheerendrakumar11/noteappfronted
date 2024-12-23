@@ -41,7 +41,7 @@ const Dashboard = () => {
 
       setUser(data); // Update user state with backend response
       handleCloseUpdateModal(); // Close the modal
-      window.location.href="/login"
+      // window.location.href="/login"
     } catch (error) {
       console.error("Error updating profile:", error);
     }
